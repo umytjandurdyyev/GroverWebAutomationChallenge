@@ -50,7 +50,7 @@ Properties file: I want to centrilize as possible. To update or change something
 I shouldn't be looking at different test or classes. Test cases must be static. I keep my common 
 information's in this file (browser type and URL)
 
-Pages: Designed based on Page Object Model. POM helping me set up better framwork, and will seperate
+Pages: Designed based on Page Object Model. POM helping me set up better framework, and will seperate
 my test cases and locators and I keep my locators and methods in the page classes
  
 ```
