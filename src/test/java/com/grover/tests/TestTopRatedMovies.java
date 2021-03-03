@@ -12,7 +12,7 @@ public class TestTopRatedMovies extends TestBase{
      * Assume that all orders are descending
      */
 
-
+    // Retrieved list of top rated movies (rank, title, year, rate)
     @Test(priority = 1)
     public void testListOfTitlesTopRatedMovies(){
 
@@ -20,12 +20,14 @@ public class TestTopRatedMovies extends TestBase{
 
     }
 
+    // Asserted that movies are in the list
     @Test(priority = 2)
     public void testAtListOneMovieInTheList(){
         assertTrue(getListOfTitlesOfTopRatedMovies().contains("The Shawshank Redemption"));
         assertTrue(getListOfTitlesOfTopRatedMovies().contains("The Handmaiden"));
     }
 
+    // Asserted previous movies true for Ranking as default
     @Test(priority = 3)
     public void testSortingOptionByRankingAsDefault(){
         assertTrue(getListOfTitlesOfTopRatedMovies().get(4).equals("12 Angry Men"));;
@@ -35,6 +37,7 @@ public class TestTopRatedMovies extends TestBase{
         assertTrue(getListOfTitlesOfTopRatedMovies().get(0).equals("The Shawshank Redemption"));;
     }
 
+    // Asserted previous movies true for IMDB Rating
     @Test(priority = 4)
     public void testSortOptionsByImdbRating(){
         getMoviesBySortingOptions("ir:descending");
@@ -45,6 +48,7 @@ public class TestTopRatedMovies extends TestBase{
         assertTrue(getListOfTitlesOfTopRatedMovies().get(0).equals("The Shawshank Redemption"));;
     }
 
+    // Asserted previous movies true for Release Date
     @Test(priority = 5)
     public void testSortOptionsByReleaseDate(){
         getMoviesBySortingOptions("us:descending");
@@ -56,6 +60,7 @@ public class TestTopRatedMovies extends TestBase{
 
     }
 
+    // Asserted previous movies true for Number of Rating
     @Test(priority = 6)
     public void testSortOptionsByNumberOfRatings(){
         getMoviesBySortingOptions("nv:descending");
@@ -66,6 +71,7 @@ public class TestTopRatedMovies extends TestBase{
         assertTrue(getListOfTitlesOfTopRatedMovies().get(0).equals("The Shawshank Redemption"));;
 
     }
+    // Asserted previous movies true for Your Rating
     @Test(priority = 7)
     public void testSortOptionsByYourRating(){
         getMoviesBySortingOptions("ur:descending");
@@ -77,6 +83,7 @@ public class TestTopRatedMovies extends TestBase{
 
     }
 
+    // After navigating to Western genre then retrieved list of sort options and by iterating asserted sorting options
     @Test
     public void testNavigateToGenreAndGetSortOptions(){
         clickGenreType("Western");
